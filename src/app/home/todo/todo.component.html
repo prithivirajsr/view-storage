@@ -1,0 +1,20 @@
+<div class="input">
+  <div class="input-inner">
+    <h1>Child Component:Todo</h1>
+    <label for="task">Task:</label><br />
+    <input
+      type="text"
+      placeholder="Enter a task to push into an array"
+      class="task"
+      [(ngModel)]="taskValue"
+    /><br />
+    <input
+      type="button"
+      id="btn"
+      value="submit"
+      class="btn"
+      (click)="getJobValue()"
+    />
+    <p>{{ displayArr }}</p>
+  </div>
+</div>

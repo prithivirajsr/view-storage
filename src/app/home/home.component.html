@@ -1,0 +1,17 @@
+<app-todo (taskValueSend)="displayJob($event)" [jobArr]="showTask"></app-todo>
+<div class="home">
+  <h1>Parent Component:Home</h1>
+  <p *ngFor="let task of taskList" #taskView>
+    {{ task }}
+  </p>
+  <div class="btn">
+    <div class="btn-submit">
+      <button type="submit" (click)="storeValueLocal(); storeValueSession()">
+        storeValue
+      </button>
+    </div>
+    <div class="btn-submit">
+      <button type="submit" (click)="getValueLocal()">getValue</button>
+    </div>
+  </div>
+</div>
